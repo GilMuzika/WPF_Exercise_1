@@ -1,0 +1,13 @@
+﻿<Window x:Class="WPF_Exercise_1.AkaMessageBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Exercise_1"
+        mc:Ignorable="d" x:Name="WindowItself"
+        Title="AkaMessageBoxWindow" Height="200" Width="350">
+    <StackPanel>
+        <TextBlock TextAlignment="Center" x:Name="tblMessage" TextWrapping="Wrap" Margin="5" Padding="5" Height="{Binding Converter={StaticResource currentPercentageConverter}, ElementName=WindowItself, Path=Height, ConverterParameter=0.6}"></TextBlock>
+        <Button Width="50" VerticalAlignment="Bottom" Margin="5" Click="Button_Click">OK</Button>
+    </StackPanel>
+</Window>

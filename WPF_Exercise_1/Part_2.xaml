@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="WPF_Exercise_1.Part_2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Exercise_1"
+             mc:Ignorable="d"
+              d:DesignWidth="800" VerticalContentAlignment="Top">
+    <StackPanel VerticalAlignment="Top" Width="700">
+        <TextBlock x:Name="tblTitle" VerticalAlignment="Top"></TextBlock>
+        <Border Margin="20" Height="30" BorderThickness="1" BorderBrush="Black">
+        <Label x:Name="lblPart2Label" Content="{Binding Part_2LabelValue, Source={StaticResource currentViewModel}}"></Label>
+        </Border>
+        <Button Command="{Binding Part2Button_Click_1_DelegComm, Source={StaticResource currentViewModel}}" VerticalAlignment="Top" Margin="10" Content="async - await"></Button>
+        <Button Click="Button_Click"  VerticalAlignment="Top" Margin="10" Content="Dispatcher.Invoke"></Button>
+        <Button Click="Button_Click_Dispatcher_Timer"  VerticalAlignment="Top" Margin="10" Content="DispatcherTimer"></Button>
+    </StackPanel>
+</UserControl>

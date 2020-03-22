@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WPF_Exercise_1.Part_1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Exercise_1"
+             mc:Ignorable="d" 
+             d:DesignWidth="800">
+
+    <StackPanel x:Name="stpPart1Stckpanel" Width="700">
+        <TextBlock x:Name="tblTitle"></TextBlock>
+        <Slider x:Name="sldPart1Slider" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="20"  Height="20" Width="600" Maximum="100" Value="{Binding ElementName=txtPart1TextBox, Path=Text, Mode=TwoWay}"/>
+        <Border BorderThickness="1" BorderBrush="Black"  Margin="20" Width="500">
+        <TextBlock Text="{Binding ElementName=txtPart1TextBox, Path=Text}" Padding="10" FontWeight="Bold" FontSize="{Binding ElementName=sldPart1Slider, Path=Value}" Foreground="Black"></TextBlock>
+        </Border>
+        <TextBox x:Name="txtPart1TextBox" Width="200" HorizontalAlignment="Left"></TextBox>
+
+    </StackPanel>
+</UserControl>
